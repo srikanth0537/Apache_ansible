@@ -4,7 +4,7 @@
   become: true
   tasks:
          
-    - name: Stoping the service
+    - name: Starting the service
       service:
           name: apache2
           state: started

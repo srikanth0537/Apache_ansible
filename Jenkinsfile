@@ -9,16 +9,20 @@ pipeline {
         }
         stage('playbook') {
             steps {
-                ansiblePlaybook credentialsId: 'ansible_login', disableHostKeyChecking: true, inventory: 'inventory', playbook: 'remove_apache2.yml'
+                ansiblePlaybook credentialsId: 'ansible_login', disableHostKeyChecking: true, inventory: 'inventory', playbook: 'installing_apache2.yml'
             }
         }
     }
     post {
             success {
-                mail to:"example@gmail.com, example05@gmail.com", subject:"SUCCESS: ${currentBuild.fullDisplayName}", body: "Yay, we passed."
+                mail (to: 'sajja.venkat05@gmail.com',
+         subject: "Job '${env.JOB_NAME}'- (${env.BUILD_NUMBER}) has SUCCEED",
+         body: "Please go to ${env.BUILD_URL} for more details. ");
             }
             failure {
-                mail to:"example@gmail.com, example@gmail.com", subject:"FAILURE: ${currentBuild.fullDisplayName}", body: "Boo, we failed."
+                mail (to: 'sajja.venkat05@gmail.com',
+         subject: "Job '${env.JOB_NAME}'- (${env.BUILD_NUMBER}) has FAILED",
+         body: "Please go to ${env.BUILD_URL} for more details. ");
             }
         }
 }

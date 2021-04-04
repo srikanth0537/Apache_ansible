@@ -4,14 +4,15 @@
   tasks:
     
     - name: Installing apache2 service
-      yum:
-         name: httpd
+      apt:
+         name: apache2
          state: present
+         update_cache: yes
          
          
     - name: Starting the service
       service:
-          name: httpd
+          name: apache2
           state: started
           enabled: yes
           

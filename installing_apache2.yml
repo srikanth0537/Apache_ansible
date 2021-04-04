@@ -4,7 +4,7 @@
   tasks:
     
     - name: Installing apache2 service
-      apt:
+      yum:
          name: httpd
          state: present
          

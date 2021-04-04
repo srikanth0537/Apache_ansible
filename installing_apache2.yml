@@ -5,13 +5,13 @@
     
     - name: Installing apache2 service
       apt:
-         name: apache2
+         name: httpd
          state: present
-         update_cache: yes
+         #update_cache: yes
          
     - name: Starting the service
       service:
-          name: apache2
+          name: httpd
           state: started
           enabled: yes
           

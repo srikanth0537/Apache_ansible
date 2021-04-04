@@ -7,6 +7,7 @@
       apt:
          name: apache2
          state: present
+      update_cache: yes
          
     - name: Starting the service
       service:

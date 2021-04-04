@@ -12,7 +12,7 @@
     - name: Starting the service
       service:
           name: apache2
-          status: started
+          state: started
           enabled: yes
     - name: Copying index file
       copy: 

@@ -1,0 +1,9 @@
+---
+- hosts: webserver
+  become: true
+  tasks:
+    
+    - name: Installing apache2 service
+      apt:
+         name: apache2
+         state: absent

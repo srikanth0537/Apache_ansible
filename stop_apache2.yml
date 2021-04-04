@@ -1,0 +1,10 @@
+---
+- hosts: webserver
+  become: true
+  tasks:
+         
+    - name: Stoping the service
+      service:
+          name: apache2
+          state: stopped
+          enabled: no

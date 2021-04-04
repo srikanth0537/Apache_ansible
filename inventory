@@ -1,2 +1,2 @@
 [webserver]
-13.233.183.95 ansible_user=centos
+13.233.183.95 ansible_user=ubuntu

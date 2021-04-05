@@ -41,7 +41,7 @@
         args:
            chdir: /usr/local/apache-tomcat-7.0.76/bin
         become: yes
-        become_user: ubuntu
+        become_user: root
           
        
       

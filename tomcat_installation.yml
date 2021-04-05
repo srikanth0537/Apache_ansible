@@ -27,6 +27,14 @@
           src: /tmp/apache-tomcat-7.0.76.tar.gz
           dest: /usr/local
           remote_src: yes
+          
+      - name: make tomcat symbolic
+        file:
+          src: /usr/local/apache-tomcat-7.0.76
+          dest:/usr/local/tomcat7
+          owner: tomcat
+          group: tomcat
+          state: link
       
    
       

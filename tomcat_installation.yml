@@ -9,7 +9,12 @@
           name: openjdk-8-jdk
           state: present
           
-      - name: get_installer
+      - name: add tomcatuser
+        user:
+           name: tomcat
+           shell:/sbin/nologin    
+          
+      - name: Downloading package
         get_url:
            url: https://archive.apache.org/dist/tomcat/tomcat-7/v7.0.76/bin/apache-tomcat-7.0.76.tar.gz
            dest: /tmp/

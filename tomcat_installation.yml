@@ -37,7 +37,9 @@
           state: link
      
       - name: Starting Tomcat 
-        shell: sh "/usr/local/apache-tomcat-7.0.76/bin/startup.sh"
+        shell: ./startup.sh
+        args:
+           chdir: /usr/local/apache-tomcat-7.0.76/bin
         become: yes
         become_user: root
           

@@ -12,7 +12,7 @@
       - name: add tomcatuser
         user:
            name: tomcat
-           shell:/sbin/nologin    
+           shell: /sbin/nologin    
           
       - name: Downloading package
         get_url:

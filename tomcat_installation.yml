@@ -35,6 +35,13 @@
           owner: tomcat
           group: tomcat
           state: link
+      - name: Firewall
+        firewalld:
+          port: 8080/tcp
+          permanent: yes
+          immediate: yes
+          state: enabled
+        become: yes
       - name: Starting Tomcat 
         shell: "/usr/local/tomcat7/bin/startup.sh"
         become: yes

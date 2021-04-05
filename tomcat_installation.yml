@@ -5,7 +5,7 @@
   tasks:
       
       -name: correct java version selected
-      alternatives:
+       alternatives:
         name: java
         path: /usr/java/jdk1.8.0_202-amd64/jre/bin/java
       

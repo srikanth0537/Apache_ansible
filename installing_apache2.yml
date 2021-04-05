@@ -28,4 +28,4 @@
           
     - name: copying files in apache2 location
       shell: cp -rf /tmp/2121_wave_cafe/* /var/www/html/ 
-      remote_src: yes
+      

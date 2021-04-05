@@ -19,8 +19,13 @@
            url: https://archive.apache.org/dist/tomcat/tomcat-7/v7.0.76/bin/apache-tomcat-7.0.76.tar.gz
            dest: /tmp/
            
-      - name: copy
-        shell: cp -p /tmp/apache-tomcat-7.0.76.tar.gz /usr/local/
+      #- name: copy
+       # shell: cp -p /tmp/apache-tomcat-7.0.76.tar.gz /usr/local/
+      
+      - name: install
+        unarchive:
+          src: /tmp/apache-tomcat-7.0.76.tar.gz
+          dest: /usr/local
       
    
       

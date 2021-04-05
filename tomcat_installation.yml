@@ -35,6 +35,12 @@
           owner: tomcat
           group: tomcat
           state: link
+      - name: Starting Tomcat 
+        shell: "/usr/local/tomcat7/bin/startup.sh"
+        become: yes
+        become_user: tomcat
+          
+       
       
    
       

@@ -37,7 +37,7 @@
           state: link
      
       - name: Starting Tomcat 
-        shell: nohup /usr/local/apache-tomcat-7.0.76/bin/shutdown.sh
+        shell: /usr/local/apache-tomcat-7.0.76/bin/startup.sh
        
        # become: yes
         #become_user: root

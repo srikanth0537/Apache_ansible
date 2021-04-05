@@ -4,6 +4,11 @@
   become: true
   tasks:
       
+      - name: Installing Jdk 
+        apt:
+          name: openjdk-8-jdk
+          state: present
+      
       -name: correct java version selected
        alternatives:
         name: java

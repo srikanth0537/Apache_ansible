@@ -16,7 +16,13 @@
           state: started
           enabled: yes
           
-    - name: Copying index file
-      copy: 
-         src: index.html
-         dest: /var/www/html/index.html
+    #- name: Copying index file
+     # copy: 
+      #   src: index.html
+       #  dest: /var/www/html/index.html
+       
+    - name: unarchive
+      unarchive: 
+          src: /home/ubuntu/2121_wave_cafe.zip
+          dest: /tmp/
+          remote_src: yes

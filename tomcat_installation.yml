@@ -31,7 +31,7 @@
       - name: make tomcat symbolic
         file:
           src: /usr/local/apache-tomcat-7.0.76
-          dest:/usr/local/tomcat7
+          dest: /usr/local/tomcat7
           owner: tomcat
           group: tomcat
           state: link

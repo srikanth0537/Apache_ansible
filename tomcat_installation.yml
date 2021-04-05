@@ -26,6 +26,7 @@
         unarchive:
           src: /tmp/apache-tomcat-7.0.76.tar.gz
           dest: /usr/local
+          remote_src: yes
       
    
       

@@ -1,2 +1,2 @@
-[webserver]
-65.1.100.172 ansible_user=ubuntu
+[Qaserver]
+172.31.36.128 ansible_user=ubuntu

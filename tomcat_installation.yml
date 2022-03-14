@@ -37,7 +37,7 @@
           state: link
      
       - name: Starting Tomcat 
-        shell: nohup /usr/local/apache-tomcat-7.0.76/bin/startup.sh
+        shell: nohup /usr/local/apache-tomcat-7.0.76/bin/startup.sh       #nohup is for running the program in background 
        # shell: nohup /usr/local/apache-tomcat-7.0.76/bin/shutdown.sh
        
        # become: yes

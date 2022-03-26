@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('git clone') {
             steps {
-              git branch: 'main',url: "https://github.com/sajjavenkey50/Apache_ansible.git" 
+              git branch: 'main',url: "https://github.com/Venkatnagaraj38/Apache_ansible.git" 
               sh "ls -ll"
             }
         }

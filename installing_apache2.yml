@@ -20,12 +20,12 @@
       #   src: index.html
        #  dest: /var/www/html/index.html
        
-    - name: unarchive
-      unarchive: 
-          src: /home/ubuntu/2121_wave_cafe.zip
-          dest: /tmp/
-          remote_src: yes
+  #  - name: unarchive
+   #   unarchive: 
+    #      src: /home/ubuntu/2121_wave_cafe.zip
+     #     dest: /tmp/
+      #    remote_src: yes
           
-    - name: copying files in apache2 location
-      shell: cp -rf /tmp/2121_wave_cafe/* /var/www/html/ 
+   # - name: copying files in apache2 location
+    #  shell: cp -rf /tmp/2121_wave_cafe/* /var/www/html/ 
       

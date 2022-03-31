@@ -25,13 +25,13 @@
           url: https://www.tooplate.com/zip-templates/2124_vertex.zip
           dest: /home/ubuntu/
          # reomte_src: yes
-      become: true
+      #become: true
              
-  #  - name: unarchive
-   #   unarchive: 
-    #      src: /home/ubuntu/2124_vertex.zip
-     #     dest: /tmp/
-      #    remote_src: yes
+    - name: unarchive
+      unarchive: 
+        src: /home/ubuntu/2124_vertex.zip
+        dest: /tmp/
+        remote_src: yes
           
    # - name: copying files in apache2 location
     #  shell: cp -rf /tmp/2124_vertex/* /var/www/html/ 

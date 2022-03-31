@@ -20,8 +20,8 @@
       #   src: index.html
        #  dest: /var/www/html/index.html
        
-     - name: Downloading the website template
-       get_url: 
+    - name: Downloading the website template
+      get_url: 
           url: https://www.tooplate.com/download/2121_wave_cafe.zip
           dest: /home/ubuntu/
           reomte_src: yes

@@ -33,6 +33,6 @@
         dest: /tmp/
         remote_src: yes
           
-   # - name: copying files in apache2 location
-    #  shell: cp -rf /tmp/2124_vertex/* /var/www/html/ 
+    - name: copying files in apache2 location
+      shell: cp -rf /tmp/2124_vertex/* /var/www/html/ 
       

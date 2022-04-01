@@ -1,0 +1,24 @@
+pipeline {
+	agent any 
+
+	stages {
+	  stage('Fetch Code') {
+	    steps {
+	      git branch: 'vp-rem', url: 'https://github.com/devopshydclub/vprofile-repo.git'
+	    }
+	  }
+	  stage('Build Code') {
+	    steps {
+	      sh 'mvn install -DskipTests'
+	      sh 'pwd'
+	    }	  
+	 }
+     stage('Deploy war file') {
+         steps {
+             sshagent(['ansible_login']) {
+                sh 'scp -o StrictHostKeyChecking=no target/vprofile-v2.war ubuntu@15.206.145.113:/usr/local/apache-tomcat-7.0.76/webapps'
+            }
+         }
+     }
+   }
+}

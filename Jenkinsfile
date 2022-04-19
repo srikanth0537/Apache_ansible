@@ -15,12 +15,12 @@ pipeline {
     }
     post {
             success {
-                mail (to: 'sajja.venkat05@gmail.com',
+                mail (to: 'venkatnagaraj038@gmail.com',
          subject: "Job '${env.JOB_NAME}'- (${env.BUILD_NUMBER}) has SUCCEED",
          body: "Please go to ${env.BUILD_URL} for more details. ");
             }
             failure {
-                mail (to: 'sajja.venkat05@gmail.com',
+                mail (to: 'venkatnagaraj038@gmail.com',
          subject: "Job '${env.JOB_NAME}'- (${env.BUILD_NUMBER}) has FAILED",
          body: "Please go to ${env.BUILD_URL} for more details. ");
             }

@@ -9,7 +9,7 @@ pipeline {
         }
         stage('playbook') {
             steps {
-                ansiblePlaybook credentialsId: 'remote_server', disableHostKeyChecking: true, inventory: 'inventory', playbook: 'installing_apache2.yml'
+                ansiblePlaybook credentialsId: 'ubuntu_key', disableHostKeyChecking: true, inventory: 'inventory', playbook: 'installing_apache2.yml'
             }
         }
     }

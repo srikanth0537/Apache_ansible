@@ -22,10 +22,10 @@
        
     - name: unarchive
       unarchive: 
-          src: /home/ubuntu/2121_wave_cafe.zip
+          src: /home/ubuntu/2126_antique_cafe.zip
           dest: /tmp/
           remote_src: yes
           
     - name: copying files in apache2 location
-      shell: cp -rf /tmp/2121_wave_cafe/* /var/www/html/ 
+      shell: cp -rf /tmp/2126_antique_cafe/* /var/www/html/ 
       

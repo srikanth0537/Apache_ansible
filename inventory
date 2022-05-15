@@ -1,2 +1,2 @@
 [ubuntu]
-13.127.214.206 ansible_user=ubuntu
+172.31.7.244 ansible_user=ubuntu

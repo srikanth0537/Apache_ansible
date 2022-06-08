@@ -1,0 +1,20 @@
+- hosts: qa
+  remote_user: ilinkadm
+ # become: yes
+ # become_method: sudo
+
+  tasks:
+
+     #  copy war file to QA server
+     - name: Coping war file
+       file:
+        path: sai
+        state: directory
+       when: Artifact == 'sai' 
+
+     #  copy war file to QA server
+     - name: Coping war file
+       file:
+        path: venkat
+        state: directory
+       when: Artifact == 'venkat'

@@ -1,5 +1,5 @@
 - hosts: qa
-  remote_user: ilinkadm
+  remote_user: ansible
  # become: yes
  # become_method: sudo
 

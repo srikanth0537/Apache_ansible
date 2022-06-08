@@ -1,5 +1,5 @@
-- hosts: all
-  remote_user: ansible
+- hosts: localhost
+  #remote_user: ubuntu
   # become: yes
   # become_method: sudo
 

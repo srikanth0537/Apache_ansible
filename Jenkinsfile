@@ -10,7 +10,7 @@ pipeline {
         stage('playbook') {
             steps {
                 //ansiblePlaybook credentialsId: 'webserverpasswd', disableHostKeyChecking: true, inventory: 'inventory', playbook: 'installing_apache2.yml'
-                ansiblePlaybook credentialsId: 'webserverpasswd', disableHostKeyChecking: true, inventory: 'inventory', playbook: 'qa.yml'
+                ansiblePlaybook credentialsId: 'qapassword', disableHostKeyChecking: true, inventory: 'inventory', playbook: 'qa.yml'
             }
         }
     }

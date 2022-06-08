@@ -1,5 +1,5 @@
-- hosts: qa
-  remote_user: ansible
+- hosts: localhost
+  remote_user: venkat
   # become: yes
   # become_method: sudo
 

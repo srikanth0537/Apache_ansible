@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('git clone') {
             steps {
-              git branch: 'main',url: "https://github.com/Venkatnagaraj38/Apache_ansible.git" 
+              git branch: 'main',url: "https://github.com/srikanth0537/Apache_ansible.git"
               sh "ls -ll"
             }
         }
@@ -16,12 +16,12 @@ pipeline {
     }
     post {
             success {
-                mail (to: 'venkatnagaraj038@gmail.com',
+                mail (to: 'srikanth.nukala12@gmail.com',
          subject: "Job '${env.JOB_NAME}'- (${env.BUILD_NUMBER}) has SUCCEED",
          body: "Please go to ${env.BUILD_URL} for more details. ");
             }
             failure {
-                mail (to: 'venkatnagaraj038@gmail.com',
+                mail (to: 'srikanth.nukala12@gmail.com',
          subject: "Job '${env.JOB_NAME}'- (${env.BUILD_NUMBER}) has FAILED",
          body: "Please go to ${env.BUILD_URL} for more details. ");
             }
